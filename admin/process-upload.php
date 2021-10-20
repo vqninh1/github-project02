@@ -16,7 +16,7 @@ if (!empty($_POST['name'])  ||empty($_POST['email']) || $_FILES['image']) {
             $name = $_POST['name'];
             $email = $_POST['email'];
             //include database configuration file
-            include_once './config/upload.php';
+            include_once("../config/upload.php");
             //insert form data in the database
             $insert = $conn->query("INSERT uploading (name,email,file_name) VALUES ('" . $name . "','" . $email . "','" . $path . "')");
             //echo $insert?'ok':'err';
